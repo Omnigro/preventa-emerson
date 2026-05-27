@@ -1,0 +1,510 @@
+{
+  "filtros": {
+    "precio": [
+      { "id": "t1", "label": "Hasta $530.000", "max": 530000 },
+      { "id": "t2", "label": "Hasta $1.000.000", "max": 1000000 },
+      { "id": "t3", "label": "Hasta $1.600.000", "max": 1600000 }
+    ],
+    "potencia": [
+      { "id": "200", "label": "200W", "value": 200 },
+      { "id": "300", "label": "300W", "value": 300 },
+      { "id": "400", "label": "400W", "value": 400 },
+      { "id": "600", "label": "600W", "value": 600 },
+      { "id": "800", "label": "800W", "value": 800 }
+    ],
+    "espectro": [
+      { "id": "vege", "label": "Vegetativo" },
+      { "id": "flora", "label": "Floración" },
+      { "id": "full", "label": "Ciclo Completo" }
+    ],
+    "objetivo": [
+      { "id": "produccion", "label": "Producción" },
+      { "id": "genetica", "label": "Experimentación / Genética" }
+    ],
+    "eficiencia": [
+      { "id": "25", "label": "2.5 μmol/J", "value": 2.5 },
+      { "id": "28", "label": "2.8 μmol/J", "value": 2.8 },
+      { "id": "32", "label": "3.2 μmol/J", "value": 3.2 }
+    ],
+    "area": [
+      { "id": "08", "label": "0.8 x 0.8 m" },
+      { "id": "1",  "label": "1 x 1 m" },
+      { "id": "12", "label": "1.2 x 1.2 m" },
+      { "id": "15", "label": "1.5 x 1.5 m" }
+    ]
+  },
+
+  "productos": [
+    {
+      "id": "pro-gs-200",
+      "nombre": "Canopy Master Pro GS 200W",
+      "linea": "Pro",
+      "serie": "GS",
+      "potencia": 200,
+      "espectros": ["full"],
+      "objetivos": ["genetica"],
+      "eficiencia": 2.8,
+      "areas": ["08"],
+      "precioLista": 563328,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 450662,
+      "imagen": "img/canopy-pro-gs-200.jpg",
+      "features": [
+        "Driver Meanwell con 5 años de garantía",
+        "Diodos Samsung LM301H EVO de última generación",
+        "Eficiencia 2.8 μmol/J — ahorro energético comprobado",
+        "Ideal para banco de madres y experimentación genética",
+        "Espectro Full Cycle balanceado para todo el ciclo de vida",
+        "Cobertura óptima en carpa 0.8 x 0.8 m",
+        "Disipación pasiva — sin ventiladores, silencioso",
+        "Dimmer 0-100% incluido"
+      ]
+    },
+    {
+      "id": "pro-gs-300",
+      "nombre": "Canopy Master Pro GS 300W",
+      "linea": "Pro",
+      "serie": "GS",
+      "potencia": 300,
+      "espectros": ["full"],
+      "objetivos": ["genetica"],
+      "eficiencia": 2.8,
+      "areas": ["08", "1"],
+      "precioLista": 687071,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 549657,
+      "imagen": "img/canopy-pro-gs-300.jpg",
+      "features": [
+        "Driver Meanwell con 5 años de garantía",
+        "Diodos Samsung LM301H EVO + LEDs rojos Osram",
+        "Eficiencia 2.8 μmol/J",
+        "Pensado para selección de fenotipos y madres robustas",
+        "Espectro Full Cycle de uso continuo",
+        "Cobertura flexible: 0.8x0.8 hasta 1x1 m",
+        "Construcción aluminio aeronáutico",
+        "Compatible con sistema de control central"
+      ]
+    },
+    {
+      "id": "pro-gs-400",
+      "nombre": "Canopy Master Pro GS 400W",
+      "linea": "Pro",
+      "serie": "GS",
+      "potencia": 400,
+      "espectros": ["full"],
+      "objetivos": ["genetica"],
+      "eficiencia": 2.8,
+      "areas": ["1", "12"],
+      "precioLista": 1137834,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 910267,
+      "imagen": "img/canopy-pro-gs-400.jpg",
+      "features": [
+        "Potencia ideal para áreas de selección genética intensiva",
+        "Driver externo Meanwell desmontable",
+        "Eficiencia 2.8 μmol/J",
+        "PPFD homogéneo en cobertura 1x1 a 1.2x1.2 m",
+        "Espectro Full Cycle para vegetativo y floración",
+        "Garantía extendida 3 años",
+        "Sistema de cuelgue regulable incluido"
+      ]
+    },
+    {
+      "id": "pro-gs-600",
+      "nombre": "Canopy Master Pro GS 600W",
+      "linea": "Pro",
+      "serie": "GS",
+      "potencia": 600,
+      "espectros": ["full"],
+      "objetivos": ["genetica"],
+      "eficiencia": 2.8,
+      "areas": ["12"],
+      "precioLista": 1326289,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 1061031,
+      "imagen": "img/canopy-pro-gs-600.jpg",
+      "features": [
+        "Alta densidad lumínica para genéticas exigentes",
+        "Driver Meanwell HLG de alta eficiencia",
+        "Eficiencia 2.8 μmol/J",
+        "Diseñado para cobertura 1.2 x 1.2 m",
+        "Espectro Full Cycle full-spectrum + UV/IR",
+        "Aluminio extruido de grado industrial",
+        "Compatible con red Wi-Fi y app móvil"
+      ]
+    },
+    {
+      "id": "pro-gs-800",
+      "nombre": "Canopy Master Pro GS 800W",
+      "linea": "Pro",
+      "serie": "GS",
+      "potencia": 800,
+      "espectros": ["full"],
+      "objetivos": ["genetica"],
+      "eficiencia": 2.8,
+      "areas": ["12", "15"],
+      "precioLista": 1616504,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 1293203,
+      "imagen": "img/canopy-pro-gs-800.jpg",
+      "features": [
+        "Top de gama para experimentación a gran escala",
+        "8 barras independientes con disipación optimizada",
+        "Eficiencia 2.8 μmol/J",
+        "Cobertura amplia 1.2x1.2 hasta 1.5x1.5 m",
+        "Espectro Full Cycle profesional",
+        "Driver Meanwell de servicio pesado",
+        "5 años de garantía total"
+      ]
+    },
+
+    {
+      "id": "pro-es-200",
+      "nombre": "Canopy Master Pro ES 200W",
+      "linea": "Pro",
+      "serie": "ES",
+      "potencia": 200,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 3.2,
+      "areas": ["08"],
+      "precioLista": 532000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 425600,
+      "imagen": "img/canopy-pro-es-200.jpg",
+      "features": [
+        "Eficiencia récord 3.2 μmol/J — máximo rendimiento",
+        "Espectro conmutable Vegetativo / Floración / Full Cycle",
+        "Diodos Samsung LM301H EVO premium",
+        "Pensado para producción comercial",
+        "Cobertura 0.8 x 0.8 m con PPFD uniforme",
+        "Driver Meanwell con dimmer integrado",
+        "Garantía extendida 5 años"
+      ]
+    },
+    {
+      "id": "pro-es-300",
+      "nombre": "Canopy Master Pro ES 300W",
+      "linea": "Pro",
+      "serie": "ES",
+      "potencia": 300,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 3.2,
+      "areas": ["08", "1"],
+      "precioLista": 647000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 517600,
+      "imagen": "img/canopy-pro-es-300.jpg",
+      "features": [
+        "Eficiencia 3.2 μmol/J — la mejor de su categoría",
+        "Espectro conmutable VEGE / FLORA / FULL",
+        "Cobertura 0.8x0.8 a 1x1 m",
+        "Ideal para cultivadores comerciales en escala mediana",
+        "Construcción robusta para uso continuo 24/7",
+        "Compatible con controladores externos 0-10V"
+      ]
+    },
+    {
+      "id": "pro-es-400",
+      "nombre": "Canopy Master Pro ES 400W",
+      "linea": "Pro",
+      "serie": "ES",
+      "potencia": 400,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 3.2,
+      "areas": ["1", "12"],
+      "precioLista": 1070000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 856000,
+      "imagen": "img/canopy-pro-es-400.jpg",
+      "features": [
+        "3.2 μmol/J — máxima eficiencia energética",
+        "Espectro conmutable para todo el ciclo",
+        "Cobertura 1x1 a 1.2x1.2 m con PPFD intenso",
+        "Diseño slim para carpas con altura limitada",
+        "Driver desmontable para mantenimiento sencillo",
+        "Garantía 5 años"
+      ]
+    },
+    {
+      "id": "pro-es-600",
+      "nombre": "Canopy Master Pro ES 600W",
+      "linea": "Pro",
+      "serie": "ES",
+      "potencia": 600,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 3.2,
+      "areas": ["12"],
+      "precioLista": 1235000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 988000,
+      "imagen": "img/canopy-pro-es-600.jpg",
+      "features": [
+        "Eficiencia 3.2 μmol/J en escala industrial",
+        "Cobertura óptima 1.2 x 1.2 m",
+        "Espectro VEGE / FLORA / FULL conmutable",
+        "Driver Meanwell HLG-600 incluido",
+        "8 barras de aluminio con disipación pasiva",
+        "Compatible con red multi-luminaria"
+      ]
+    },
+    {
+      "id": "pro-es-800",
+      "nombre": "Canopy Master Pro ES 800W",
+      "linea": "Pro",
+      "serie": "ES",
+      "potencia": 800,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 3.2,
+      "areas": ["12", "15"],
+      "precioLista": 1500000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 1200000,
+      "imagen": "img/canopy-pro-es-800.jpg",
+      "features": [
+        "Buque insignia: 800W con eficiencia 3.2 μmol/J",
+        "Cobertura 1.2x1.2 a 1.5x1.5 m",
+        "Espectro conmutable VEGE / FLORA / FULL CYCLE",
+        "Driver de grado industrial",
+        "Diseño profesional para grow rooms comerciales",
+        "Garantía total 5 años + soporte premium"
+      ]
+    },
+
+    {
+      "id": "core-gs-200",
+      "nombre": "Canopy Master Core GS 200W",
+      "linea": "Core",
+      "serie": "GS",
+      "potencia": 200,
+      "espectros": ["full"],
+      "objetivos": ["genetica"],
+      "eficiencia": 2.5,
+      "areas": ["08"],
+      "precioLista": 390000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 312000,
+      "imagen": "img/canopy-core-gs-200.jpg",
+      "features": [
+        "Línea Core: la opción accesible de Canopy Master",
+        "Eficiencia 2.5 μmol/J — relación costo/rendimiento óptima",
+        "Espectro Full Cycle para selección genética",
+        "Cobertura 0.8 x 0.8 m",
+        "Driver integrado de bajo consumo",
+        "Ideal para hobbyistas y bancos de madres pequeños"
+      ]
+    },
+    {
+      "id": "core-gs-300",
+      "nombre": "Canopy Master Core GS 300W",
+      "linea": "Core",
+      "serie": "GS",
+      "potencia": 300,
+      "espectros": ["full"],
+      "objetivos": ["genetica"],
+      "eficiencia": 2.5,
+      "areas": ["08", "1"],
+      "precioLista": 480000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 384000,
+      "imagen": "img/canopy-core-gs-300.jpg",
+      "features": [
+        "Línea Core — costo accesible, calidad Canopy Master",
+        "Eficiencia 2.5 μmol/J",
+        "Espectro Full Cycle",
+        "Cobertura flexible 0.8x0.8 a 1x1 m",
+        "Diseño compacto y liviano",
+        "Garantía 2 años"
+      ]
+    },
+    {
+      "id": "core-gs-400",
+      "nombre": "Canopy Master Core GS 400W",
+      "linea": "Core",
+      "serie": "GS",
+      "potencia": 400,
+      "espectros": ["full"],
+      "objetivos": ["genetica"],
+      "eficiencia": 2.5,
+      "areas": ["1", "12"],
+      "precioLista": 795000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 636000,
+      "imagen": "img/canopy-core-gs-400.jpg",
+      "features": [
+        "Línea Core: 400W para selección genética intermedia",
+        "Eficiencia 2.5 μmol/J",
+        "Espectro Full Cycle",
+        "Cobertura 1x1 a 1.2x1.2 m",
+        "Driver Meanwell de gama estándar",
+        "Garantía 2 años"
+      ]
+    },
+    {
+      "id": "core-gs-600",
+      "nombre": "Canopy Master Core GS 600W",
+      "linea": "Core",
+      "serie": "GS",
+      "potencia": 600,
+      "espectros": ["full"],
+      "objetivos": ["genetica"],
+      "eficiencia": 2.5,
+      "areas": ["12"],
+      "precioLista": 925000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 740000,
+      "imagen": "img/canopy-core-gs-600.jpg",
+      "features": [
+        "Potencia media-alta a precio competitivo",
+        "Eficiencia 2.5 μmol/J",
+        "Cobertura 1.2 x 1.2 m",
+        "Espectro Full Cycle",
+        "Construcción aluminio + driver desmontable",
+        "Garantía 2 años"
+      ]
+    },
+    {
+      "id": "core-gs-800",
+      "nombre": "Canopy Master Core GS 800W",
+      "linea": "Core",
+      "serie": "GS",
+      "potencia": 800,
+      "espectros": ["full"],
+      "objetivos": ["genetica"],
+      "eficiencia": 2.5,
+      "areas": ["12", "15"],
+      "precioLista": 1130000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 904000,
+      "imagen": "img/canopy-core-gs-800.jpg",
+      "features": [
+        "Top de la línea Core a precio accesible",
+        "Eficiencia 2.5 μmol/J",
+        "Cobertura amplia 1.2x1.2 hasta 1.5x1.5 m",
+        "Espectro Full Cycle",
+        "8 barras con disipación pasiva",
+        "Garantía 2 años"
+      ]
+    },
+
+    {
+      "id": "core-es-200",
+      "nombre": "Canopy Master Core ES 200W",
+      "linea": "Core",
+      "serie": "ES",
+      "potencia": 200,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 2.5,
+      "areas": ["08"],
+      "precioLista": 370000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 296000,
+      "imagen": "img/canopy-core-es-200.jpg",
+      "features": [
+        "Línea Core ES: producción a costo accesible",
+        "Espectro conmutable VEGE / FLORA / FULL",
+        "Eficiencia 2.5 μmol/J",
+        "Cobertura 0.8 x 0.8 m",
+        "Pensado para cultivadores que arrancan",
+        "Garantía 2 años"
+      ]
+    },
+    {
+      "id": "core-es-300",
+      "nombre": "Canopy Master Core ES 300W",
+      "linea": "Core",
+      "serie": "ES",
+      "potencia": 300,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 2.5,
+      "areas": ["08", "1"],
+      "precioLista": 450000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 360000,
+      "imagen": "img/canopy-core-es-300.jpg",
+      "features": [
+        "Espectro conmutable para producción comercial entry-level",
+        "Eficiencia 2.5 μmol/J",
+        "Cobertura 0.8x0.8 a 1x1 m",
+        "Driver integrado",
+        "Costo accesible para cultivos pequeños",
+        "Garantía 2 años"
+      ]
+    },
+    {
+      "id": "core-es-400",
+      "nombre": "Canopy Master Core ES 400W",
+      "linea": "Core",
+      "serie": "ES",
+      "potencia": 400,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 2.5,
+      "areas": ["1", "12"],
+      "precioLista": 745000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 596000,
+      "imagen": "img/canopy-core-es-400.jpg",
+      "features": [
+        "400W para producción a precio competitivo",
+        "Espectro VEGE / FLORA / FULL",
+        "Eficiencia 2.5 μmol/J",
+        "Cobertura 1x1 a 1.2x1.2 m",
+        "Construcción robusta",
+        "Garantía 2 años"
+      ]
+    },
+    {
+      "id": "core-es-600",
+      "nombre": "Canopy Master Core ES 600W",
+      "linea": "Core",
+      "serie": "ES",
+      "potencia": 600,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 2.5,
+      "areas": ["12"],
+      "precioLista": 865000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 692000,
+      "imagen": "img/canopy-core-es-600.jpg",
+      "features": [
+        "Producción comercial mediana a costo accesible",
+        "Espectro conmutable",
+        "Eficiencia 2.5 μmol/J",
+        "Cobertura 1.2 x 1.2 m",
+        "Driver Meanwell estándar",
+        "Garantía 2 años"
+      ]
+    },
+    {
+      "id": "core-es-800",
+      "nombre": "Canopy Master Core ES 800W",
+      "linea": "Core",
+      "serie": "ES",
+      "potencia": 800,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 2.5,
+      "areas": ["12", "15"],
+      "precioLista": 1050000,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 840000,
+      "imagen": "img/canopy-core-es-800.jpg",
+      "features": [
+        "800W de producción a precio Core",
+        "Espectro VEGE / FLORA / FULL",
+        "Eficiencia 2.5 μmol/J",
+        "Cobertura 1.2x1.2 a 1.5x1.5 m",
+        "8 barras con disipación pasiva",
+        "Garantía 2 años"
+      ]
+    }
+  ]
+}
