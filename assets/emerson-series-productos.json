@@ -1,0 +1,185 @@
+{
+  "filtros": {
+    "precio": [
+      { "id": "t1", "label": "Hasta $530.000", "max": 530000 },
+      { "id": "t2", "label": "Hasta $1.000.000", "max": 1000000 },
+      { "id": "t3", "label": "Hasta $1.600.000", "max": 1600000 }
+    ],
+    "potencia": [
+      { "id": "200", "label": "200W", "value": 200 },
+      { "id": "300", "label": "300W", "value": 300 },
+      { "id": "400", "label": "400W", "value": 400 },
+      { "id": "600", "label": "600W", "value": 600 },
+      { "id": "800", "label": "800W", "value": 800 }
+    ],
+    "espectro": [
+      { "id": "vege", "label": "Vegetativo" },
+      { "id": "flora", "label": "Floración" },
+      { "id": "full", "label": "Ciclo Completo" }
+    ],
+    "objetivo": [
+      { "id": "produccion", "label": "Producción" },
+      { "id": "genetica", "label": "Experimentación / Genética" }
+    ],
+    "eficiencia": [
+      { "id": "25", "label": "2.5 μmol/J", "value": 2.5 },
+      { "id": "28", "label": "2.8 μmol/J", "value": 2.8 },
+      { "id": "32", "label": "3.2 μmol/J", "value": 3.2 }
+    ],
+    "area": [
+      { "id": "08", "label": "0.8 x 0.8 m" },
+      { "id": "1",  "label": "1 x 1 m" },
+      { "id": "12", "label": "1.2 x 1.2 m" },
+      { "id": "15", "label": "1.5 x 1.5 m" }
+    ]
+  },
+
+  "productos": [
+    {
+      "id": "pro-es-200",
+      "nombre": "Canopy Master Pro ES 200W",
+      "linea": "Pro",
+      "serie": "ES",
+      "potencia": 200,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 3.2,
+      "ppf": 1200,
+      "dimensiones": "80 x 60 cm",
+      "cobertura": "0.8 x 0.8 m",
+      "areas": ["08"],
+      "peso": "8 kg",
+      "vidaUtil": "50000 hrs",
+      "precioListaUSD": 380.00,
+      "precioListaARS": 537700,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 430160,
+      "imagen": "img/canopy-pro-es-200.jpg",
+      "features": [
+        "Eficiencia récord 3.2 μmol/J — máximo rendimiento",
+        "Espectro conmutable Vegetativo / Floración / Full Cycle",
+        "Diodos Samsung LM301H EVO premium",
+        "Pensado para producción comercial",
+        "Cobertura 0.8 x 0.8 m con PPFD uniforme",
+        "Driver Meanwell con dimmer integrado",
+        "Garantía extendida 5 años"
+      ]
+    },
+    {
+      "id": "pro-es-300",
+      "nombre": "Canopy Master Pro ES 300W",
+      "linea": "Pro",
+      "serie": "ES",
+      "potencia": 300,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 3.2,
+      "ppf": 1200,
+      "dimensiones": "80 x 60 cm",
+      "cobertura": "0.8 x 0.8 m",
+      "areas": ["08", "1"],
+      "peso": "8 kg",
+      "vidaUtil": "50000 hrs",
+      "precioListaUSD": 462.00,
+      "precioListaARS": 653730,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 522984,
+      "imagen": "img/canopy-pro-es-300.jpg",
+      "features": [
+        "Eficiencia 3.2 μmol/J — la mejor de su categoría",
+        "Espectro conmutable VEGE / FLORA / FULL",
+        "Cobertura 0.8x0.8 a 1x1 m",
+        "Ideal para cultivadores comerciales en escala mediana",
+        "Construcción robusta para uso continuo 24/7",
+        "Compatible con controladores externos 0-10V"
+      ]
+    },
+    {
+      "id": "pro-es-400",
+      "nombre": "Canopy Master Pro ES 400W",
+      "linea": "Pro",
+      "serie": "ES",
+      "potencia": 400,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 3.2,
+      "ppf": 1200,
+      "dimensiones": "90 x 90 cm",
+      "cobertura": "1 x 1 m",
+      "areas": ["1", "12"],
+      "peso": "10 kg",
+      "vidaUtil": "50000 hrs",
+      "precioListaUSD": 765.00,
+      "precioListaARS": 1082475,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 865980,
+      "imagen": "img/canopy-pro-es-400.jpg",
+      "features": [
+        "3.2 μmol/J — máxima eficiencia energética",
+        "Espectro conmutable para todo el ciclo",
+        "Cobertura 1x1 a 1.2x1.2 m con PPFD intenso",
+        "Diseño slim para carpas con altura limitada",
+        "Driver desmontable para mantenimiento sencillo",
+        "Garantía 5 años"
+      ]
+    },
+    {
+      "id": "pro-es-600",
+      "nombre": "Canopy Master Pro ES 600W",
+      "linea": "Pro",
+      "serie": "ES",
+      "potencia": 600,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 3.2,
+      "ppf": 1200,
+      "dimensiones": "110 x 110 cm",
+      "cobertura": "1.2 x 1.2 m",
+      "areas": ["12"],
+      "peso": "11 kg",
+      "vidaUtil": "50000 hrs",
+      "precioListaUSD": 884.00,
+      "precioListaARS": 1250860,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 1000688,
+      "imagen": "img/canopy-pro-es-600.jpg",
+      "features": [
+        "Eficiencia 3.2 μmol/J en escala industrial",
+        "Cobertura óptima 1.2 x 1.2 m",
+        "Espectro VEGE / FLORA / FULL conmutable",
+        "Driver Meanwell HLG-600 incluido",
+        "8 barras de aluminio con disipación pasiva",
+        "Compatible con red multi-luminaria"
+      ]
+    },
+    {
+      "id": "pro-es-800",
+      "nombre": "Canopy Master Pro ES 800W",
+      "linea": "Pro",
+      "serie": "ES",
+      "potencia": 800,
+      "espectros": ["vege", "flora", "full"],
+      "objetivos": ["produccion"],
+      "eficiencia": 3.2,
+      "ppf": 1200,
+      "dimensiones": "110 x 110 cm",
+      "cobertura": "1.5 x 1.5 m",
+      "areas": ["12", "15"],
+      "peso": "11 kg",
+      "vidaUtil": "50000 hrs",
+      "precioListaUSD": 1072.00,
+      "precioListaARS": 1516880,
+      "descuentoPreventa": 0.20,
+      "precioPreventa": 1213504,
+      "imagen": "img/canopy-pro-es-800.jpg",
+      "features": [
+        "Buque insignia: 800W con eficiencia 3.2 μmol/J",
+        "Cobertura 1.2x1.2 a 1.5x1.5 m",
+        "Espectro conmutable VEGE / FLORA / FULL CYCLE",
+        "Driver de grado industrial",
+        "Diseño profesional para grow rooms comerciales",
+        "Garantía total 5 años + soporte premium"
+      ]
+    }
+  ]
+}
