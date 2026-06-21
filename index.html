@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PXKRLGSS');</script>
+  <!-- End Google Tag Manager -->
+
   <title>Canopy Master PRO Emerson Series — El LED más eficiente de Argentina | Omnigro</title>
   <meta name="description" content="3.2 µmol/J certificados + Efecto Emerson nativo. Garantía 2 años, reemplazo 48hs AMBA. Diseñado y fabricado en Argentina. Pre-venta con 20% OFF.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -3152,6 +3161,29 @@
 </head>
 <body>
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXKRLGSS"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ═══════════════════════════════════════
+       CAPA DE MEDICIÓN (dataLayer) · ver plan_de_medicion.md
+  ═══════════════════════════════════════ -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function track(event, params) {
+      window.dataLayer.push(Object.assign({ event: event }, params || {}));
+    }
+    // Delegación global: clicks de WhatsApp y CTA "Cotizá tu sala"
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest) return;
+      var wa = e.target.closest('a[href*="wa.me"]');
+      if (wa) { track('whatsapp_click', { wa_location: wa.dataset.wa || 'otro' }); return; }
+      var cta = e.target.closest('a[href="#cotizar"]');
+      if (cta) { track('cta_click', { cta_location: cta.dataset.cta || 'generico', cta_text: cta.textContent.trim() }); }
+    });
+  </script>
+
   <!-- ═══════════════════════════════════════
        TICKER BAR
   ═══════════════════════════════════════ -->
@@ -3196,7 +3228,7 @@
     <a href="/" class="nav__logo" aria-label="Omnigro inicio">
       <img src="assets/logo-negro-transparente.png" alt="Omnigro" width="120" height="26">
     </a>
-    <a href="#cotizar" class="nav__cta-ghost">Cotizá tu sala →</a>
+    <a href="#cotizar" class="nav__cta-ghost" data-cta="nav">Cotizá tu sala →</a>
   </nav>
 
 
@@ -3292,7 +3324,7 @@
       <!-- Col izq / fila 2: CTAs + trust (mobile: bajo el slider) -->
       <div class="hero__actions">
         <div class="hero__ctas">
-          <a href="#cotizar" class="btn-primary">
+          <a href="#cotizar" class="btn-primary" data-cta="hero">
             Cotizá tu sala
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6"
@@ -3866,7 +3898,7 @@ No alcanza solo con la eficiencia del chip.<br></p>
 
           <!-- CTAs -->
           <div class="prod-ctas">
-            <a href="#" id="prodBtnWa" class="btn-wa" target="_blank" rel="noopener noreferrer">
+            <a href="#" id="prodBtnWa" class="btn-wa" data-wa="producto" target="_blank" rel="noopener noreferrer">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
               Comprar por WhatsApp
             </a>
@@ -4179,7 +4211,8 @@ No alcanza solo con la eficiencia del chip.<br></p>
       <!-- CTA inferior -->
       <div class="faq__cta">
         <p class="faq__cta-text">¿Quedó alguna duda? Escribinos directamente.</p>
-        <a href="#cotizar" class="btn-primary">
+        <a href="#cotizar" class="btn-primary" data-cta="faq">
+
           Cotizá tu sala
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6"
@@ -4309,7 +4342,7 @@ No alcanza solo con la eficiencia del chip.<br></p>
             <p class="cta-form__success-title">¡Listo! Te contactamos pronto.</p>
             <p class="cta-form__success-sub">Revisamos tu sala y te enviamos una propuesta en menos de 24 hs hábiles.</p>
             <a href="https://wa.me/5492325460300?text=Hola%2C%20acabo%20de%20completar%20el%20formulario.%20Quedé%20esperando%20la%20propuesta."
-               class="btn-wa" target="_blank" rel="noopener noreferrer"
+               class="btn-wa" data-wa="post_form" target="_blank" rel="noopener noreferrer"
                style="margin-top:16px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
               Seguir por WhatsApp
@@ -4327,7 +4360,7 @@ No alcanza solo con la eficiencia del chip.<br></p>
 
         <!-- Botón WhatsApp directo -->
         <a href="https://wa.me/5492325460300?text=Hola%2C%20quiero%20cotizar%20mi%20sala%20con%20Canopy%20Master%20PRO."
-           class="btn-wa btn-full" id="ctaBtnWa" target="_blank" rel="noopener noreferrer">
+           class="btn-wa btn-full" id="ctaBtnWa" data-wa="cta_final" target="_blank" rel="noopener noreferrer">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           Escribinos por WhatsApp
         </a>
@@ -4418,7 +4451,7 @@ No alcanza solo con la eficiencia del chip.<br></p>
             Fabricantes argentinos de iluminación LED para cultivo profesional.
           </p>
           <a href="https://wa.me/5492325460300?text=Hola%2C%20quiero%20información%20sobre%20Canopy%20Master%20PRO."
-             class="footer__wa-pill" target="_blank" rel="noopener noreferrer">
+             class="footer__wa-pill" data-wa="info" target="_blank" rel="noopener noreferrer">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             Consultá por WhatsApp
           </a>
@@ -4440,16 +4473,16 @@ No alcanza solo con la eficiencia del chip.<br></p>
           <div class="footer__col">
             <p class="footer__col-title">Soporte</p>
             <ul class="footer__links">
-              <li><a class="footer__link" href="#cotizar">Cotizar sala completa</a></li>
+              <li><a class="footer__link" href="#cotizar" data-cta="footer">Cotizar sala completa</a></li>
               <li>
                 <a class="footer__link" href="https://wa.me/5492325460300?text=Hola%2C%20necesito%20soporte%20técnico."
-                   target="_blank" rel="noopener noreferrer">Soporte técnico</a>
+                   data-wa="footer_soporte" target="_blank" rel="noopener noreferrer">Soporte técnico</a>
               </li>
               <li>
                 <a class="footer__link" href="https://wa.me/5492325460300?text=Hola%2C%20quiero%20información%20sobre%20garantía."
-                   target="_blank" rel="noopener noreferrer">Garantía 2 años</a>
+                   data-wa="footer_garantia" target="_blank" rel="noopener noreferrer">Garantía 2 años</a>
               </li>
-              <li><a class="footer__link" href="#cotizar">Reemplazo express AMBA</a></li>
+              <li><a class="footer__link" href="#cotizar" data-cta="footer">Reemplazo express AMBA</a></li>
             </ul>
           </div>
 
@@ -4788,8 +4821,22 @@ No alcanza solo con la eficiencia del chip.<br></p>
         this.classList.add('is-active');
         this.setAttribute('aria-selected', 'true');
         renderModel(this.dataset.model);
+        var mm = MODELOS[this.dataset.model] || {};
+        track('select_model', {
+          model_watts: this.dataset.model,
+          model_name: mm.nombre,
+          model_price: mm.precio,
+          model_efficiency: mm.eficiencia
+        });
       });
     });
+
+    // Tracking — descarga de brochure
+    if (elBtnFicha) {
+      elBtnFicha.addEventListener('click', function() {
+        track('download_brochure', { file_name: 'brochure-canopy-master-pro.pdf', model_watts: currentModel });
+      });
+    }
 
     // Flechas slider
     if (elPrev) elPrev.addEventListener('click', function() { setImg(currentImgIdx - 1); });
@@ -4832,6 +4879,8 @@ No alcanza solo con la eficiencia del chip.<br></p>
         if (!isOpen) {
           item.classList.add('is-open');
           btn.setAttribute('aria-expanded', 'true');
+          var q = btn.querySelector('.faq__question-text');
+          track('faq_open', { faq_question: (q ? q.textContent : btn.textContent).trim() });
         }
       });
     });
@@ -4851,6 +4900,12 @@ No alcanza solo con la eficiencia del chip.<br></p>
     var ctaBtnWa   = document.getElementById('ctaBtnWa');
 
     if (!form) return;
+
+    // Tracking — inicio de formulario (primer foco)
+    var formStarted = false;
+    form.addEventListener('focusin', function() {
+      if (!formStarted) { formStarted = true; track('form_start', { section_id: 'cotizar' }); }
+    });
 
     function setLoading(on) {
       submitBtn.disabled = on;
@@ -4878,93 +4933,16 @@ No alcanza solo con la eficiencia del chip.<br></p>
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
+      // Tracking — lead generado (conversión principal)
+      var contacto = (form.querySelector('[name="contacto"]') || {}).value || '';
+      track('generate_lead', {
+        lead_cantidad: (form.querySelector('[name="cantidad"]') || {}).value || '',
+        lead_cuando: (form.querySelector('[name="cuando"]') || {}).value || '',
+        lead_contacto_tipo: contacto.indexOf('@') > -1 ? 'email' : 'whatsapp',
+        currency: 'ARS'
+      });
       setLoading(true);
       fetch(GAS_URL, {
         method: 'POST',
         mode: 'no-cors', // Apps Script no envía headers CORS; igual procesa el envío
-        body: new URLSearchParams(new FormData(form))
-      })
-      .then(function()  { setLoading(false); showSuccess(); })
-      .catch(function() { setLoading(false); showSuccess(); }); // no-cors no deja leer la respuesta
-    });
-
-    // Tracking WA click
-    if (ctaBtnWa) {
-      ctaBtnWa.addEventListener('click', function() {
-        if (typeof gtag === 'function') gtag('event', 'whatsapp_clicked', { event_category: 'cta_final' });
-        if (typeof fbq === 'function')  fbq('track', 'Contact');
-      });
-    }
-  })();
-
-
-  /* ─────────────────────────────────────────────────
-     COUNTDOWN PRE-VENTA · IIFE
-     Fecha de cierre: 30 de junio 2026 23:59:59 ART
-  ───────────────────────────────────────────────── */
-  (function() {
-    var PREVENTA_END = new Date('2026-06-30T23:59:59-03:00');
-
-    // IDs de los contadores en los 3 sectores
-    var sectors = [
-      { d: 'cdHeroDias',  h: 'cdHeroHoras',  m: 'cdHeroMins',  s: 'cdHeroSegs',  exp: 'cdHeroExp',  wrap: null },
-      { d: 'cdProdDias',  h: 'cdProdHoras',  m: 'cdProdMins',  s: 'cdProdSegs',  exp: 'cdProdExp',  wrap: null },
-      { d: 'cdCtaDias',   h: 'cdCtaHoras',   m: 'cdCtaMins',   s: 'cdCtaSegs',   exp: 'cdCtaExp',   wrap: null }
-    ];
-
-    function pad(n) { return n < 10 ? '0' + n : String(n); }
-
-    function update() {
-      var now  = new Date();
-      var diff = PREVENTA_END - now;
-
-      if (diff <= 0) {
-        // Pre-venta expirada: ocultar contadores y mostrar mensaje
-        sectors.forEach(function(sec) {
-          ['d','h','m','s'].forEach(function(k) {
-            var el = document.getElementById(sec[k]);
-            if (el) el.closest('.countdown__unit') && (el.closest('.countdown__unit').style.display = 'none');
-          });
-          // Ocultar separadores del sector
-          var units = document.getElementById(sec.d);
-          if (units) {
-            var countdown = units.closest('.countdown');
-            if (countdown) {
-              Array.prototype.forEach.call(countdown.querySelectorAll('.countdown__sep'), function(sep) {
-                sep.style.display = 'none';
-              });
-            }
-          }
-          var expEl = document.getElementById(sec.exp);
-          if (expEl) expEl.style.display = 'block';
-        });
-        clearInterval(timer);
-        return;
-      }
-
-      var totalSecs = Math.floor(diff / 1000);
-      var dias  = Math.floor(totalSecs / 86400);
-      var horas = Math.floor((totalSecs % 86400) / 3600);
-      var mins  = Math.floor((totalSecs % 3600) / 60);
-      var segs  = totalSecs % 60;
-
-      sectors.forEach(function(sec) {
-        var elD = document.getElementById(sec.d);
-        var elH = document.getElementById(sec.h);
-        var elM = document.getElementById(sec.m);
-        var elS = document.getElementById(sec.s);
-        if (elD) elD.textContent = pad(dias);
-        if (elH) elH.textContent = pad(horas);
-        if (elM) elM.textContent = pad(mins);
-        if (elS) elS.textContent = pad(segs);
-      });
-    }
-
-    update(); // ejecutar de inmediato para evitar flash "--"
-    var timer = setInterval(update, 1000);
-  })();
-  </script>
-
-
-</body>
-</html>
+       
