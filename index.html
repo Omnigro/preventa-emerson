@@ -4838,6 +4838,21 @@ No alcanza solo con la eficiencia del chip.<br></p>
       });
     }
 
+    // Tracking — intención de compra (Comprar por WhatsApp del producto) → AddToCart con value/currency
+    if (elBtnWa) {
+      elBtnWa.addEventListener('click', function() {
+        var m = MODELOS[currentModel] || {};
+        track('add_to_cart', {
+          currency: 'ARS',
+          value: parseInt(String(m.precio).replace(/\D/g, ''), 10) || 0,  // '$1.213.504' -> 1213504
+          model_watts: currentModel,
+          model_name: m.nombre,
+          content_ids: ['cm-pro-' + currentModel],
+          content_type: 'product'
+        });
+      });
+    }
+
     // Flechas slider
     if (elPrev) elPrev.addEventListener('click', function() { setImg(currentImgIdx - 1); });
     if (elNext) elNext.addEventListener('click', function() { setImg(currentImgIdx + 1); });
