@@ -44,7 +44,8 @@
       "espectros": ["vege", "flora", "full"],
       "objetivos": ["produccion"],
       "eficiencia": 3.2,
-      "ppf": 1200,
+      "ppf": 704,
+      "chipsPorPlaca": 188,
       "dimensiones": "80 x 60 cm",
       "cobertura": "0.8 x 0.8 m",
       "areas": ["08"],
@@ -61,8 +62,8 @@
         "Diodos Samsung LM301H EVO premium",
         "Pensado para producción comercial",
         "Cobertura 0.8 x 0.8 m con PPFD uniforme",
-        "Driver Meanwell con dimmer integrado",
-        "Garantía extendida 5 años"
+        "Driver Joson de alta eficiencia (+95%)",
+        "Garantía extendida 2 años"
       ]
     },
     {
@@ -74,7 +75,8 @@
       "espectros": ["vege", "flora", "full"],
       "objetivos": ["produccion"],
       "eficiencia": 3.2,
-      "ppf": 1200,
+      "ppf": 1024,
+      "chipsPorPlaca": 188,
       "dimensiones": "80 x 60 cm",
       "cobertura": "0.8 x 0.8 m",
       "areas": ["08", "1"],
@@ -91,7 +93,8 @@
         "Cobertura 0.8x0.8 a 1x1 m",
         "Ideal para cultivadores comerciales en escala mediana",
         "Construcción robusta para uso continuo 24/7",
-        "Compatible con controladores externos 0-10V"
+        "Compatible con controladores externos 0-10V",
+        "Garantía extendida 2 años"
       ]
     },
     {
@@ -103,8 +106,9 @@
       "espectros": ["vege", "flora", "full"],
       "objetivos": ["produccion"],
       "eficiencia": 3.2,
-      "ppf": 1200,
-      "dimensiones": "90 x 90 cm",
+      "ppf": 1344,
+      "chipsPorPlaca": 188,
+      "dimensiones": "80 x 80 cm",
       "cobertura": "1 x 1 m",
       "areas": ["1", "12"],
       "peso": "10 kg",
@@ -119,8 +123,8 @@
         "Espectro conmutable para todo el ciclo",
         "Cobertura 1x1 a 1.2x1.2 m con PPFD intenso",
         "Diseño slim para carpas con altura limitada",
-        "Driver desmontable para mantenimiento sencillo",
-        "Garantía 5 años"
+        "Driver Joson de alta eficiencia (+95%)",
+        "Garantía extendida 2 años"
       ]
     },
     {
@@ -132,7 +136,8 @@
       "espectros": ["vege", "flora", "full"],
       "objetivos": ["produccion"],
       "eficiencia": 3.2,
-      "ppf": 1200,
+      "ppf": 1984,
+      "chipsPorPlaca": 188,
       "dimensiones": "110 x 110 cm",
       "cobertura": "1.2 x 1.2 m",
       "areas": ["12"],
@@ -147,9 +152,10 @@
         "Eficiencia 3.2 μmol/J en escala industrial",
         "Cobertura óptima 1.2 x 1.2 m",
         "Espectro VEGE / FLORA / FULL conmutable",
-        "Driver Meanwell HLG-600 incluido",
+        "Driver Joson de alta eficiencia (+95%)",
         "8 barras de aluminio con disipación pasiva",
-        "Compatible con red multi-luminaria"
+        "Compatible con red multi-luminaria",
+        "Garantía extendida 2 años"
       ]
     },
     {
@@ -161,24 +167,25 @@
       "espectros": ["vege", "flora", "full"],
       "objetivos": ["produccion"],
       "eficiencia": 3.2,
-      "ppf": 1200,
+      "ppf": 2624,
+      "chipsPorPlaca": 188,
       "dimensiones": "110 x 110 cm",
       "cobertura": "1.5 x 1.5 m",
       "areas": ["12", "15"],
       "peso": "11 kg",
       "vidaUtil": "50000 hrs",
       "precioListaUSD": 1072.00,
-      "precioListaARS": 1334840,
+      "precioListaARS": 1618720,
       "descuentoPreventa": 0.20,
-      "precioPreventa": 1067872,
+      "precioPreventa": 1294976,
       "imagen": "img/canopy-pro-es-800.jpg",
       "features": [
         "Buque insignia: 800W con eficiencia 3.2 μmol/J",
         "Cobertura 1.2x1.2 a 1.5x1.5 m",
         "Espectro conmutable VEGE / FLORA / FULL CYCLE",
-        "Driver de grado industrial",
+        "Driver Joson de alta eficiencia (+95%)",
         "Diseño profesional para grow rooms comerciales",
-        "Garantía total 5 años + soporte premium"
+        "Garantía extendida 2 años"
       ]
     }
   ]
