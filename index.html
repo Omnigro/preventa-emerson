@@ -3875,8 +3875,8 @@ No alcanza solo con la eficiencia del chip.<br></p>
           <div class="prod-specs" role="list" aria-label="Especificaciones técnicas">
 
             <div class="prod-spec" role="listitem">
-              <span class="prod-spec__label">Potencia</span>
-              <span class="prod-spec__value" id="specPotencia">800W</span>
+              <span class="prod-spec__label">Consumo</span>
+              <span class="prod-spec__value" id="specPotencia">880 W</span>
             </div>
 
             <div class="prod-spec" role="listitem">
@@ -4878,8 +4878,66 @@ No alcanza solo con la eficiencia del chip.<br></p>
       }, { passive: true });
     }
 
-    // Init
-    renderModel('800');
+    // ── Datos desde JSON externo ──────────────────────────────────
+    // Los datos de producto salen de assets/emerson-series-productos.json.
+    // El objeto MODELOS de arriba queda como FALLBACK: se usa tal cual si el
+    // fetch falla (p. ej. al abrir el HTML como file://, donde fetch da CORS).
+    // Las imágenes del slider NO están en el JSON, así que se reutilizan las
+    // del fallback (mapeadas por potencia). El resto de campos sale del JSON.
+    var JSON_URL = 'assets/emerson-series-productos.json';
+    var BADGE    = '20% OFF';
+
+    function fmtARS(n) {
+      var v = Number(n);
+      return isFinite(v) ? '$' + v.toLocaleString('es-AR') : '—';
+    }
+    function fmtVida(v) {
+      var n = parseInt(String(v).replace(/\D/g, ''), 10);
+      return isFinite(n) ? n.toLocaleString('es-AR') + ' hs' : (v || '—');
+    }
+    function fmtDim(s) {
+      return String(s || '').replace(/\s*[x×]\s*/gi, '×').trim();
+    }
+
+    function buildModelsFromJSON(data) {
+      var out = {};
+      (data && data.productos ? data.productos : []).forEach(function(p) {
+        var m = String(p.id || '').match(/(\d+)\s*$/);
+        var watts = m ? m[1] : null;
+        if (!watts) return;
+        var fb = MODELOS[watts] || {};   // fallback embebido (imágenes, etc.)
+        out[watts] = {
+          nombre:     'Canopy Master PRO ' + watts + 'W',
+          wattsLabel: watts + 'W',
+          precio:     fmtARS(p.precioPreventa),
+          lista:      fmtARS(p.precioListaARS),
+          badge:      BADGE,
+          potencia:   (p.potencia != null ? p.potencia + ' W' : watts + 'W'),
+          eficiencia: (p.eficiencia != null ? String(p.eficiencia) + ' µmol/J' : fb.eficiencia),
+          consumo:    (p.ppf != null ? p.ppf + ' µmol/s' : fb.consumo),
+          cobertura:  fmtDim(p.cobertura)  || fb.cobertura,
+          medidas:    fmtDim(p.dimensiones) || fb.medidas,
+          vidaUtil:   fmtVida(p.vidaUtil),
+          imgs:       fb.imgs || [],       // imágenes del slider (no están en el JSON)
+          waMsg:      'Hola%2C%20quiero%20cotizar%20el%20Canopy%20Master%20PRO%20' + watts + 'W.',
+          ficha:      fb.ficha || 'canopy-master-pro-emerson-series.pdf'
+        };
+      });
+      return out;
+    }
+
+    // Init — carga JSON con fallback a los datos embebidos
+    fetch(JSON_URL, { cache: 'no-cache' })
+      .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function(data) {
+        var built = buildModelsFromJSON(data);
+        if (built && Object.keys(built).length) { MODELOS = built; }
+        renderModel(currentModel);
+      })
+      .catch(function() {
+        // Si falla (CORS/file:// o JSON inválido), se usan los datos embebidos.
+        renderModel(currentModel);
+      });
 
   })();
   </script>
