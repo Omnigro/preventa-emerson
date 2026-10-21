@@ -1610,7 +1610,8 @@
     /* Thumbnails */
     .prod-slider__thumbs {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(0, 1fr);
       gap: 10px;
     }
 
@@ -1636,6 +1637,25 @@
 
     .prod-thumb.is-active,
     .prod-thumb:hover { border-color: var(--olive); }
+
+    .prod-slider__thumb {
+      aspect-ratio: 4 / 3;
+      border: 1.5px solid var(--beige);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #f4f3ef;
+      transition: border-color 0.2s;
+    }
+    .prod-slider__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 0;
+    }
+    .prod-slider__thumb.is-active,
+    .prod-slider__thumb:hover { border-color: var(--olive); }
 
     /* ── Info de producto ── */
     .prod-info {
@@ -1880,6 +1900,30 @@
     /* ══════════════════════════════════════════════
        § 5 · COMPARATIVA TÉCNICA
     ══════════════════════════════════════════════ */
+
+    /* ═══ § 4b · MAPA PAR ═══ */
+    .mapa-par { background: var(--white); padding: clamp(64px, 7vh, 88px) 24px; border-top: 1px solid rgba(37,38,23,0.08); }
+    .mapa-par__inner { max-width: 1100px; margin: 0 auto; display: grid; gap: 40px; align-items: center; }
+    @media (min-width: 900px) { .mapa-par__inner { grid-template-columns: 0.85fr 1.15fr; gap: 56px; } .mapa-par { padding-left: 48px; padding-right: 48px; } }
+    .mapa-par__eyebrow { font-family: var(--font-body); font-size: 9px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--olive); margin-bottom: 14px; }
+    .mapa-par__title { font-family: var(--font-title); font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; color: var(--dark); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 14px; }
+    .mapa-par__sub { font-family: var(--font-body); font-size: 14px; font-weight: 300; line-height: 1.7; color: rgba(37,38,23,0.6); margin-bottom: 28px; }
+    .mapa-par__stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(37,38,23,0.10); border: 1px solid rgba(37,38,23,0.10); border-radius: 16px; overflow: hidden; margin-bottom: 24px; }
+    .mapa-par__stat { background: var(--cream); padding: 16px 18px; }
+    .mapa-par__stat-num { display: block; font-family: var(--font-title); font-size: 28px; font-weight: 800; color: var(--dark); line-height: 1; }
+    .mapa-par__stat-label { display: block; margin-top: 6px; font-family: var(--font-body); font-size: 11px; color: rgba(37,38,23,0.55); }
+    .mapa-par__readout { font-family: var(--font-body); font-size: 13px; color: var(--dark); min-height: 20px; margin-top: 12px; text-align: center; }
+    .mapa-par__fig { margin: 0; }
+    .mapa-par__grid { display: grid; grid-template-columns: repeat(13, 1fr); gap: 2px; border-radius: 12px; overflow: hidden; }
+    .mapa-par__cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-family: var(--font-body); font-size: clamp(7px, 0.85vw, 11px); font-variant-numeric: tabular-nums; color: rgba(37,38,23,0.85); cursor: default; transition: transform .15s ease, box-shadow .15s ease; }
+    .mapa-par__cell:hover, .mapa-par__cell.is-active { transform: scale(1.12); box-shadow: 0 2px 10px rgba(0,0,0,.25); position: relative; z-index: 1; }
+    .mapa-par__cell.is-hot { color: #fff; }
+    .mapa-par__axis { display: flex; justify-content: space-between; font-family: var(--font-body); font-size: 10px; color: rgba(37,38,23,0.45); margin-top: 8px; }
+    .mapa-par__legend { display: flex; align-items: center; gap: 8px; justify-content: flex-end; font-family: var(--font-body); font-size: 10px; color: rgba(37,38,23,0.55); margin-top: 10px; }
+    .mapa-par__legend-bar { width: 140px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #f3d9a0, #eb9a45, #d4533a); }
+    .mapa-par__caption { font-family: var(--font-body); font-size: 11px; color: rgba(37,38,23,0.5); margin-top: 14px; }
+    @media (max-width: 599px) { .mapa-par__cell { font-size: 0; } .mapa-par__stat-num { font-size: 22px; } .mapa-par__stat { padding: 14px; } }
+
     .comparativa {
       background: var(--cream);
       padding: clamp(64px, 7vh, 88px) 24px;
@@ -3875,6 +3919,35 @@ No alcanza solo con la eficiencia del chip.<br></p>
   </section>
 
 
+
+  <!-- ═══════════════════════════════════════
+       § 4b · MAPA PAR CM800
+  ═══════════════════════════════════════ -->
+  <section class="mapa-par" id="mapa-par" aria-label="Mapa PPFD del Canopy Master PRO 800W">
+    <div class="mapa-par__inner">
+      <div>
+        <p class="mapa-par__eyebrow">Medición real · Mapa PPFD</p>
+        <h2 class="mapa-par__title">Luz pareja en toda la sala, no solo en el centro.</h2>
+        <p class="mapa-par__sub">Medimos el CM800 punto por punto sobre una superficie de 120 × 120 cm, a 40 cm de altura y sin paredes reflectantes. Cada celda es una lectura real de PPFD (µmol/m²/s).</p>
+        <div class="mapa-par__stats">
+          <div class="mapa-par__stat"><span class="mapa-par__stat-num">1.245</span><span class="mapa-par__stat-label">PPFD promedio</span></div>
+          <div class="mapa-par__stat"><span class="mapa-par__stat-num">1.606</span><span class="mapa-par__stat-label">PPFD máximo</span></div>
+          <div class="mapa-par__stat"><span class="mapa-par__stat-num">40 cm</span><span class="mapa-par__stat-label">Altura de medición</span></div>
+          <div class="mapa-par__stat"><span class="mapa-par__stat-num">1,2 × 1,2 m</span><span class="mapa-par__stat-label">Superficie medida</span></div>
+        </div>
+        <a href="assets/fichas-tecnicas/Omnigro_Mapa-PAR_CM800-Pro_ES.pdf" id="btnMapaPar" class="btn-ficha" download>Descargar mapa PAR (PDF)</a>
+      </div>
+      <figure class="mapa-par__fig">
+        <div class="mapa-par__grid" id="mapaParGrid" role="img" aria-label="Mapa de calor PPFD del CM800: promedio 1245 y máximo 1606 µmol/m²/s sobre 120 × 120 cm"></div>
+        <div class="mapa-par__axis" aria-hidden="true"><span>0</span><span>30</span><span>60</span><span>90</span><span>120 cm</span></div>
+        <p class="mapa-par__readout" id="mapaParReadout" aria-live="polite">Pasá el cursor (o tocá) una celda para ver el valor</p>
+        <div class="mapa-par__legend" aria-hidden="true"><span>200</span><span class="mapa-par__legend-bar"></span><span>1700 µmol/m²/s</span></div>
+        <figcaption class="mapa-par__caption">Medidor Hopocolor 350P · rango espectral 350–800 nm.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
   <!-- ═══════════════════════════════════════
        § 5 · COMPARATIVA TÉCNICA
   ═══════════════════════════════════════ -->
@@ -4582,13 +4655,14 @@ No alcanza solo con la eficiencia del chip.<br></p>
         medidas:     '110×110 cm',
         vidaUtil:    '50.000 hs',
         imgs: [
-          { src: 'assets/producto/CM-800 - 2026/OmniGro - CM-800-ES - Cam01 - 01_PS1.jpg', alt: 'CM-800W — Vista Cam01' },
+          { src: 'assets/producto/web/CM800-ES-principal.webp', alt: 'Canopy Master PRO ES 800W — vista principal' },
           { src: 'assets/producto/CM-800 - 2026/OmniGro - CM-800-ES - Cam02 - 01_PS1.jpg', alt: 'CM-800W — Vista Cam02' },
           { src: 'assets/producto/CM-800 - 2026/OmniGro - CM-800 - Detalle Dimmer 1 - 01.jpg', alt: 'CM-800W — Detalle dimmer' },
-          { src: 'assets/producto/CM-800 - 2026/OmniGro - CM-800 - Detalle Dimmer 2 - 01.jpg', alt: 'CM-800W — Detalle dimmer' }
+          { src: 'assets/producto/CM-800 - 2026/OmniGro - CM-800 - Detalle Dimmer 2 - 01.jpg', alt: 'CM-800W — Detalle dimmer' },
+          { src: 'assets/producto/web/CM800-ES-mapa-par.webp', alt: 'Mapa PPFD medido del Canopy Master PRO ES 800W', fit: 'contain' }
         ],
         waMsg:  'Hola%2C%20quiero%20cotizar%20el%20Canopy%20Master%20PRO%20800W.',
-        ficha:  'canopy-master-pro-emerson-series.pdf'
+        ficha:  'assets/fichas-tecnicas/Omnigro_Ficha_CM800-Pro_ES.pdf'
       },
       '600': {
         nombre:     'Canopy Master PRO 600W',
@@ -4603,13 +4677,14 @@ No alcanza solo con la eficiencia del chip.<br></p>
         medidas:    '110×110 cm',
         vidaUtil:   '50.000 hs',
         imgs: [
-          { src: 'assets/producto/CM-600 - 2026/OmniGro - CM-600-ES - Cam01 - 01_PS1.jpg', alt: 'CM-600W — Vista Cam01' },
+          { src: 'assets/producto/web/CM600-ES-principal.webp', alt: 'Canopy Master PRO ES 600W — vista principal' },
           { src: 'assets/producto/CM-600 - 2026/OmniGro - CM-600-ES - Cam02 - 01_PS1.jpg', alt: 'CM-600W — Vista Cam02' },
           { src: 'assets/producto/CM-600 - 2026/OmniGro - CM-600 - Detalle Dimmer 1 - 001.jpg', alt: 'CM-600W — Detalle dimmer' },
-          { src: 'assets/producto/CM-600 - 2026/OmniGro - CM-600 - Detalle Dimmer 2 - 01.jpg', alt: 'CM-600W — Detalle dimmer' }
+          { src: 'assets/producto/CM-600 - 2026/OmniGro - CM-600 - Detalle Dimmer 2 - 01.jpg', alt: 'CM-600W — Detalle dimmer' },
+          { src: 'assets/producto/web/CM600-ES-mapa-par.webp', alt: 'Mapa PPFD medido del Canopy Master PRO ES 600W', fit: 'contain' }
         ],
         waMsg: 'Hola%2C%20quiero%20cotizar%20el%20Canopy%20Master%20PRO%20600W.',
-        ficha: 'canopy-master-pro-emerson-series.pdf'
+        ficha: 'assets/fichas-tecnicas/Omnigro_Ficha_CM600-Pro_ES.pdf'
       },
       '400': {
         nombre:     'Canopy Master PRO 400W',
@@ -4624,13 +4699,13 @@ No alcanza solo con la eficiencia del chip.<br></p>
         medidas:    '90×90 cm',
         vidaUtil:   '50.000 hs',
         imgs: [
-          { src: 'assets/producto/CM-400 - 2026/OmniGro - CM-400-ES - Cam01 - 01a_PS1.jpg',   alt: 'CM-400W — Vista Cam01' },
+          { src: 'assets/producto/web/CM400-ES-principal.webp',   alt: 'Canopy Master PRO ES 400W — vista principal' },
           { src: 'assets/producto/CM-400 - 2026/OmniGro - CM-400-ES - Cam02 - 01a_PS1.jpg',   alt: 'CM-400W — Vista Cam02' },
           { src: 'assets/producto/CM-400 - 2026/OmniGro - CM-400 - Detalle Dimmer 1 - 01.jpg', alt: 'CM-400W — Detalle dimmer' },
           { src: 'assets/producto/CM-400 - 2026/OmniGro - CM-400 - Detalle Dimmer 2 - 01.jpg', alt: 'CM-400W — Detalle dimmer' }
         ],
         waMsg: 'Hola%2C%20quiero%20cotizar%20el%20Canopy%20Master%20PRO%20400W.',
-        ficha: 'canopy-master-pro-emerson-series.pdf'
+        ficha: 'assets/fichas-tecnicas/Omnigro_Ficha_CM400-Pro_ES.pdf'
       },
       '300': {
         nombre:     'Canopy Master PRO 300W',
@@ -4645,13 +4720,14 @@ No alcanza solo con la eficiencia del chip.<br></p>
         medidas:    '80×60 cm',
         vidaUtil:   '50.000 hs',
         imgs: [
-          { src: 'assets/producto/CM-300 - 2026/OmniGro - CM-300-ES - Cam01 - 01a_PS.jpg',    alt: 'CM-300W — Vista Cam01' },
+          { src: 'assets/producto/web/CM300-ES-principal.webp',    alt: 'Canopy Master PRO ES 300W — vista principal' },
           { src: 'assets/producto/CM-300 - 2026/OmniGro - CM-300-ES - Cam02 - 01a_PS.jpg',    alt: 'CM-300W — Vista Cam02' },
           { src: 'assets/producto/CM-300 - 2026/OmniGro - CM-300 - Detalle Dimmer 1 - 001.jpg', alt: 'CM-300W — Detalle dimmer' },
-          { src: 'assets/producto/CM-300 - 2026/OmniGro - CM-300 - Detalle Dimmer 2 - 001.jpg', alt: 'CM-300W — Detalle dimmer' }
+          { src: 'assets/producto/CM-300 - 2026/OmniGro - CM-300 - Detalle Dimmer 2 - 001.jpg', alt: 'CM-300W — Detalle dimmer' },
+          { src: 'assets/producto/web/CM300-ES-mapa-par.webp', alt: 'Mapa PPFD medido del Canopy Master PRO ES 300W', fit: 'contain' }
         ],
         waMsg: 'Hola%2C%20quiero%20cotizar%20el%20Canopy%20Master%20PRO%20300W.',
-        ficha: 'canopy-master-pro-emerson-series.pdf'
+        ficha: 'assets/fichas-tecnicas/Omnigro_Ficha_CM300-Pro_ES.pdf'
       },
       '200': {
         nombre:     'Canopy Master PRO 200W',
@@ -4666,13 +4742,14 @@ No alcanza solo con la eficiencia del chip.<br></p>
         medidas:    '80×60 cm',
         vidaUtil:   '50.000 hs',
         imgs: [
-          { src: 'assets/producto/CM-200 - 2026/OmniGro - CM-200-ES - Cam01 - 01a_PS.jpg',    alt: 'CM-200W — Vista Cam01' },
+          { src: 'assets/producto/web/CM200-ES-principal.webp',    alt: 'Canopy Master PRO ES 200W — vista principal' },
           { src: 'assets/producto/CM-200 - 2026/OmniGro - CM-200-ES - Cam02 - 01a_PS.jpg',    alt: 'CM-200W — Vista Cam02' },
           { src: 'assets/producto/CM-200 - 2026/OmniGro - CM-200 - Detalle Dimmer 1 - 001.jpg', alt: 'CM-200W — Detalle dimmer' },
-          { src: 'assets/producto/CM-200 - 2026/OmniGro - CM-200 - Detalle Dimmer 2 - 001.jpg', alt: 'CM-200W — Detalle dimmer' }
+          { src: 'assets/producto/CM-200 - 2026/OmniGro - CM-200 - Detalle Dimmer 2 - 001.jpg', alt: 'CM-200W — Detalle dimmer' },
+          { src: 'assets/producto/web/CM200-ES-mapa-par.webp', alt: 'Mapa PPFD medido del Canopy Master PRO ES 200W', fit: 'contain' }
         ],
         waMsg: 'Hola%2C%20quiero%20cotizar%20el%20Canopy%20Master%20PRO%20200W.',
-        ficha: 'canopy-master-pro-emerson-series.pdf'
+        ficha: 'assets/fichas-tecnicas/Omnigro_Ficha_CM200-Pro_ES.pdf'
       }
     };
 
@@ -4705,7 +4782,7 @@ No alcanza solo con la eficiencia del chip.<br></p>
       modelo.imgs.forEach(function(img, i) {
         var thumb = document.createElement('div');
         thumb.className = 'prod-slider__thumb' + (i === 0 ? ' is-active' : '');
-        thumb.innerHTML = '<img src="' + img.src + '" alt="' + img.alt + '" loading="lazy">';
+        thumb.innerHTML = '<img src="' + img.src + '" alt="' + img.alt + '" loading="lazy"' + (img.fit ? ' style="object-fit:' + img.fit + '"' : '') + '>';
         thumb.addEventListener('click', function() { setImg(i); });
         elThumbs.appendChild(thumb);
       });
@@ -4721,6 +4798,8 @@ No alcanza solo con la eficiencia del chip.<br></p>
         setTimeout(function() {
           elMainImg.src = modelo.imgs[idx].src;
           elMainImg.alt = modelo.imgs[idx].alt;
+          elMainImg.style.objectFit = modelo.imgs[idx].fit || '';
+          elMainImg.style.background = modelo.imgs[idx].fit ? '#f4f3ef' : '';
           elMainImg.classList.remove('is-fading');
         }, 180);
       }
@@ -4776,7 +4855,7 @@ No alcanza solo con la eficiencia del chip.<br></p>
     // Tracking — descarga de brochure
     if (elBtnFicha) {
       elBtnFicha.addEventListener('click', function() {
-        track('download_brochure', { file_name: 'canopy-master-pro-emerson-series.pdf', model_watts: currentModel });
+        track('download_brochure', { file_name: (elBtnFicha.getAttribute('href')||'').split('/').pop(), model_watts: currentModel });
       });
     }
 
@@ -5044,5 +5123,65 @@ No alcanza solo con la eficiencia del chip.<br></p>
   </script>
 
 
+
+  <!-- Mapa PAR CM800 -->
+  <script>
+  (function() {
+    var D = [
+      [475,568,667,735,754,738,722,737,751,736,684,605,515],
+      [616,737,885,969,989,969,940,964,977,949,870,755,636],
+      [766,936,1114,1199,1226,1223,1224,1218,1214,1171,1062,911,753],
+      [884,1072,1250,1366,1416,1420,1409,1417,1414,1365,1225,1041,848],
+      [950,1138,1321,1460,1539,1546,1525,1544,1539,1470,1326,1127,907],
+      [974,1157,1351,1496,1580,1605,1564,1606,1587,1517,1381,1176,929],
+      [981,1151,1368,1503,1571,1589,1589,1591,1582,1532,1405,1208,927],
+      [989,1174,1370,1511,1579,1592,1589,1594,1587,1535,1407,1203,953],
+      [978,1170,1360,1502,1570,1568,1555,1566,1570,1518,1383,1180,951],
+      [922,1112,1301,1433,1479,1476,1466,1476,1482,1446,1313,1116,905],
+      [811,977,1162,1265,1299,1301,1306,1303,1305,1273,1168,989,811],
+      [672,782,932,1028,1058,1049,1035,1054,1067,1042,954,812,689],
+      [545,625,719,787,808,793,774,800,822,809,749,660,570]
+    ];
+    var grid = document.getElementById('mapaParGrid');
+    var out  = document.getElementById('mapaParReadout');
+    if (!grid) return;
+    var stops = [[200,[243,217,160]],[950,[235,154,69]],[1700,[212,83,58]]];
+    function color(v) {
+      for (var i = 0; i < stops.length - 1; i++) {
+        var a = stops[i], b = stops[i+1];
+        if (v <= b[0]) {
+          var t = Math.max(0, (v - a[0]) / (b[0] - a[0]));
+          return 'rgb(' + a[1].map(function(c, k) { return Math.round(c + (b[1][k] - c) * t); }).join(',') + ')';
+        }
+      }
+      return 'rgb(212,83,58)';
+    }
+    var frag = document.createDocumentFragment(), active = null;
+    D.forEach(function(row, r) {
+      row.forEach(function(v, c) {
+        var el = document.createElement('div');
+        el.className = 'mapa-par__cell' + (v >= 1300 ? ' is-hot' : '');
+        el.style.background = color(v);
+        el.textContent = v;
+        el.dataset.info = v.toLocaleString('es-AR') + ' µmol/m²/s · posición ' + (c * 10) + ' × ' + (r * 10) + ' cm';
+        frag.appendChild(el);
+      });
+    });
+    grid.appendChild(frag);
+    function show(e) {
+      var el = e.target.closest('.mapa-par__cell');
+      if (!el) return;
+      if (active) active.classList.remove('is-active');
+      active = el; el.classList.add('is-active');
+      if (out) out.textContent = el.dataset.info;
+    }
+    grid.addEventListener('mouseover', show);
+    grid.addEventListener('click', show);
+    var btn = document.getElementById('btnMapaPar');
+    if (btn) btn.addEventListener('click', function() {
+      if (window.dataLayer) window.dataLayer.push({ event: 'download_brochure', file_name: 'Omnigro_Mapa-PAR_CM800-Pro_ES.pdf', model_watts: '800' });
+    });
+  })();
+  </script>
 </body>
 </html>
